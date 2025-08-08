@@ -57,14 +57,18 @@ const About = () => {
             <div className="mt-8 p-6 bg-dark-light rounded-xl">
               <h3 className="text-2xl font-bold mb-4 neon-blue">Who I Am</h3>
               <p className="text-light/80 mb-4">
-                I am a passionate Full Stack Developer with over 5 years of experience building 
-                modern web applications. I specialize in creating immersive digital experiences 
-                using cutting-edge technologies.
+                I am a passionate Full Stack Developer and AI Enthusiast with 2 years of experience, 
+                specializing in both front-end and back-end development. I enjoy taking on new challenges 
+                and applying my technical knowledge to solve complex problems.
+              </p>
+              <p className="text-light/80 mb-4">
+                I continuously hone my skills by participating in various coding competitions. 
+                My goal is to not only compete but to win them and further refine my abilities.
+                I love bringing ideas to life through code.
               </p>
               <p className="text-light/80">
-                My journey in software development began with a curiosity about how digital products 
-                work and has evolved into a career focused on crafting elegant solutions to complex problems. 
-                I love bringing ideas to life through code.
+                Currently pursuing my BSc in Software Engineering at Daffodil International University (2024-2028),
+                with a strong academic background (SSC GPA: 5.00, HSC GPA: 5.00).
               </p>
             </div>
           </motion.div>

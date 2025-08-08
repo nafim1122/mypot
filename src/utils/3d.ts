@@ -1,19 +1,24 @@
-import { useEffect, useState } from 'react';
 import * as THREE from 'three';
 
-// This is a placeholder for model loading
-// In the actual implementation, this will be replaced with proper Three.js loaders
+interface ModelOptions {
+  receiveShadow: boolean;
+  castShadow: boolean;
+}
+
+// This creates a placeholder cube model for the 3D scene
 export const loadGLTFModel = (
   scene: THREE.Scene,
   glbPath: string,
-  options = { receiveShadow: true, castShadow: true }
-) => {
+  options: ModelOptions = { receiveShadow: true, castShadow: true }
+): { 
+  createModel: () => THREE.Group; 
+  removeModel: () => void;
+} => {
   const { receiveShadow, castShadow } = options;
-  const [loading, setLoading] = useState(true);
-  const [model, setModel] = useState<THREE.Group | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
+  let modelGroup: THREE.Group | null = null;
+  
+  // Function to create a placeholder model
+  const createModel = (): THREE.Group => {
     // Create a placeholder model (a simple cube)
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     const material = new THREE.MeshStandardMaterial({ 
@@ -31,25 +36,23 @@ export const loadGLTFModel = (
     group.name = 'placeholder-model';
     scene.add(group);
     
-    // Simulate loading complete
-    setModel(group);
-    setLoading(false);
+    // Store reference to the group
+    modelGroup = group;
     
-    // In a real implementation, we would use:
-    // import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-    // import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
-    // And load the actual model from glbPath
-    
-    return () => {
-      if (model) {
-        scene.remove(model);
-      } else {
-        scene.remove(group);
-      }
-    };
-  }, [scene, glbPath, receiveShadow, castShadow]);
+    return group;
+  };
+  
+  // Function to remove the model from the scene
+  const removeModel = (): void => {
+    if (modelGroup) {
+      scene.remove(modelGroup);
+      modelGroup = null;
+    }
+  };
+  
+  return { createModel, removeModel };
 
-  return { loading, model, error };
+  return { createModel, removeModel };
 };
 
 // Create a basic scene setup with lights

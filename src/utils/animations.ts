@@ -67,7 +67,7 @@ export const scaleAnimation = {
 };
 
 // Function to animate elements with GSAP
-export const animateElement = (element: HTMLElement, animation: any) => {
+export const animateElement = (element: HTMLElement, animation: Record<string, unknown>) => {
   gsap.from(element, {
     ...animation,
     scrollTrigger: {

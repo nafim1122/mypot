@@ -143,8 +143,12 @@ const HeroObject = ({ className = '' }: HeroObjectProps) => {
     // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
-      if (containerRef.current && rendererRef.current) {
-        containerRef.current.removeChild(rendererRef.current.domElement);
+      // Save a reference to the current container
+      const currentContainer = containerRef.current;
+      const currentRenderer = rendererRef.current;
+      
+      if (currentContainer && currentRenderer) {
+        currentContainer.removeChild(currentRenderer.domElement);
       }
       
       // Dispose of resources

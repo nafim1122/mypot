@@ -35,9 +35,18 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="neon-blue">Full Stack</span> <br />
-            <span className="neon-purple">Developer</span>
+            <span className="neon-blue">Zonaid Hossain</span> <br />
+            <span className="neon-purple">Nafim</span>
           </motion.h1>
+          
+          <motion.h2
+            className="text-2xl md:text-3xl font-medium mb-3"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <span className="text-primary">Full Stack Developer | AI Enthusiast</span>
+          </motion.h2>
           
           <motion.p 
             className="text-lg md:text-xl text-light/80 mb-8 max-w-lg"
@@ -45,9 +54,9 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Creating immersive digital experiences with modern technologies.
+            Creating innovative digital solutions with modern technologies.
             Specializing in full-stack development with expertise in React, 
-            Three.js, and cloud solutions.
+            Node.js, and competitive programming.
           </motion.p>
           
           <motion.div 

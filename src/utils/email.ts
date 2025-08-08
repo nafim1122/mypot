@@ -1,4 +1,5 @@
 import emailjs from '@emailjs/browser';
+import { emailConfig } from '@/config/email';
 
 interface EmailParams {
   name: string;
@@ -14,9 +15,9 @@ interface EmailResult {
 
 export const sendEmail = async (
   params: EmailParams,
-  serviceId: string = 'service_id', // Replace with your Email.js service ID
-  templateId: string = 'template_id', // Replace with your Email.js template ID
-  userId: string = 'user_id' // Replace with your Email.js user ID
+  serviceId: string = emailConfig.serviceId,
+  templateId: string = emailConfig.templateId,
+  userId: string = emailConfig.userId
 ): Promise<EmailResult> => {
   try {
     const templateParams = {
