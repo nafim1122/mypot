@@ -6,6 +6,7 @@ import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Projects from '@/components/sections/Projects';
+import Projects3D from '@/components/sections/Projects3D';
 import Experience from '@/components/sections/Experience';
 import Contact from '@/components/sections/Contact';
 import CustomCursor from '@/components/ui/CustomCursor';
@@ -27,7 +28,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <Projects />
+        <Projects3D />
         <Experience />
         <Contact />
       </main>

@@ -42,6 +42,7 @@ export const skills = [
 
 export const projects = [
   {
+    id: "rescue-tracking",
     title: "Rescue Tracking",
     description: "A location-based emergency rescue tracking application that helps connect people in need with emergency services in real-time.",
     image: "/assets/images/project1.jpg",
@@ -49,8 +50,12 @@ export const projects = [
     source: "https://github.com/nafim1122/rescue-tracking",
     live: "https://rescue-tracking.demo.com",
     featured: true,
+    modelType: "sphere",
+    color: "#0ea5e9",
+    hoverColor: "#0284c7"
   },
   {
+    id: "smart-farming",
     title: "Smart Farming & Crop Health Detection",
     description: "Mobile application built using Flutter, Firebase, and TensorFlow Lite for real-time crop health monitoring and smart farming assistance.",
     image: "/assets/images/project2.jpg",
@@ -58,8 +63,12 @@ export const projects = [
     source: "https://github.com/nafim1122/smart-farming",
     live: "https://smart-farming.demo.com",
     featured: true,
+    modelType: "torusKnot",
+    color: "#8b5cf6",
+    hoverColor: "#7c3aed"
   },
   {
+    id: "3d-portfolio",
     title: "3D Portfolio Website",
     description: "An interactive 3D portfolio website built with Next.js, Three.js, and Tailwind CSS featuring animated components and responsive design.",
     image: "/assets/images/project3.jpg",
@@ -67,22 +76,33 @@ export const projects = [
     source: "https://github.com/nafim1122/3d-portfolio",
     live: "https://nafim-portfolio.demo.com",
     featured: true,
+    modelType: "cube",
+    color: "#10b981",
+    hoverColor: "#059669"
   },
   {
+    id: "cp-solutions",
     title: "Competitive Programming Solutions",
     description: "A collection of my solutions to various competitive programming challenges from platforms like Codeforces, LeetCode, and HackerRank.",
     image: "/assets/images/project4.jpg",
     tags: ["C Programming", "Algorithms", "Data Structures", "Problem Solving"],
     source: "https://github.com/nafim1122/competitive-programming",
     live: "https://cp-solutions.demo.com",
+    modelType: "sphere",
+    color: "#f59e0b",
+    hoverColor: "#d97706"
   },
   {
+    id: "e-learning",
     title: "E-Learning Platform",
     description: "A web application for online learning with features like video courses, quizzes, and progress tracking for students.",
     image: "/assets/images/project5.jpg",
     tags: ["React", "Node.js", "MongoDB", "Express", "Authentication"],
     source: "https://github.com/nafim1122/e-learning-platform",
     live: "https://e-learning.demo.com",
+    modelType: "cube",
+    color: "#ec4899",
+    hoverColor: "#db2777"
   },
 ];
 
